@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.HashSet;
 import java.util.Random;
+import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity {
     String tag = MainActivity.class.getSimpleName();
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int[] createLottery(){
-        HashSet<Integer> numSet = new HashSet<Integer>();
+        TreeSet<Integer> numSet = new TreeSet<>();
 
         while (numSet.size()<textViewLen){
             numSet.add(new Random().nextInt(49) + 1);
